@@ -13,4 +13,21 @@ This portfolio is built with the following technologies:
 - 🌍 **Netlify/Vercel**: Hosting for lightning-fast deployment.
 
 
- 
+🌐 Live Demo
+
+Check out the live portfolio: Your Portfolio Link
+
+
+🛠️ Future Enhancements :
+
+🔗 Add a blog section.
+🌍 Enable multi-language support.
+📊 Integrate analytics for better insights.
+
+
+📧 Contact Me
+Have questions or feedback? Reach out to me:
+
+📩 Email: riteshthorve387@gmail.com
+💼 LinkedIn: https://www.linkedin.com/in/ritesh-thorve/
+🌐 Portfolio:  

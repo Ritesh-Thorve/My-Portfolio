@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom'; 
 import { useTypewriter } from '../hooks/useTypewriter';
 import SocialIcons from './SocialIcons';
-import { FaDownload } from 'react-icons/fa';  // Import the download icon
+import { FaDownload } from 'react-icons/fa';   
 
 export default function Hero() {
   const roles = useTypewriter({
@@ -68,7 +68,7 @@ export default function Hero() {
               </button>
             </Link>
             
-            <NavLink to="https://drive.google.com/file/d/1li1oy701M_yOM7SLojq0teJsFJ0pMgvl/view" smooth={true} duration={500}>
+            <NavLink to="https://drive.google.com/file/d/176Ww16uuZxqAYv2mwoqY01C-SGlxy-WS/view" smooth={true} duration={500}>
               <button className="btn-primary group flex items-center font-bold">
                  Resume
                 <FaDownload className="ml-2" size={20} />  

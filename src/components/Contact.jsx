@@ -23,7 +23,7 @@ export default function Contact() {
       icon: FaEnvelope,
       title: 'Email',
       content: 'riteshthorve387@gmail.com',
-      link: 'mailto:contact@example.com'
+      link: 'mailto:riteshthorve387@gmail.com'
     }
   ];
 

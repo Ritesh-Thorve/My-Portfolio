@@ -26,11 +26,12 @@ export default function Navbar() {
             className="text-3xl font-bold"
             whileHover={{ scale: 1.05 }}
           >
+             
             <NavLink to="/">
-              <span className="bg-gradient-to-r from-primary to-blue-400 text-transparent bg-clip-text font-bold pl-14">
-                Ritesh
+              <span className='ml-14 text-2xl'>Pleasure to</span> 
+              <span className="bg-gradient-to-r text-2xl from-primary to-blue-400 text-transparent bg-clip-text font-bold pl-2">connect! 
               </span>     
-            </NavLink>
+            </NavLink> 
           </motion.div>
           
           {/* Desktop Navigation */}
@@ -43,8 +44,7 @@ export default function Navbar() {
                   `nav-link cursor-pointer relative group ${isActive ? 'text-primary' : ''}`
                 }
               >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                {item.name} 
               </NavLink>
             ))}
           </div>

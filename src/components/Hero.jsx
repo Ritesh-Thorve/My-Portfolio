@@ -90,7 +90,7 @@ export default function Hero() {
           <div className="relative">
             <div className="w-64 h-64 md:w-96 md:h-96 rounded-full bg-gradient-to-r from-primary to-blue-400 mx-auto overflow-hidden p-1">
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=768&h=768&q=80"
+                src="ritesh2.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover rounded-full"
               />

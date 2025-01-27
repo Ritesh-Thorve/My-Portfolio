@@ -23,7 +23,7 @@ export default function Portfolio() {
       title: 'Portfolio Website',
       category: 'Web Development',
       image: 'Screenshot 2025-01-26 174800.png',
-      path: 'https://github.com/Ritesh-Thorve/Porfolio/tree/main/Self-Portfolio',
+      path: 'https://github.com/Ritesh-Thorve/My-Portfolio',
       path2: '/',
     },
   ];

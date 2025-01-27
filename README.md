@@ -22,9 +22,8 @@ Check out the live portfolio: Your Portfolio Link
 
 🔗 Add a blog section.
 
-🌍 Enable multi-language support.
-
-📊 Integrate analytics for better insights.
+🌍 working on adding projects.
+ 
 ---
 
 📧 Contact Me

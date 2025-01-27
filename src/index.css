@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-dark text-white font-sans;
+}
+
+.nav-link {
+  @apply cursor-pointer hover:text-primary transition-colors duration-300;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-primary to-blue-400 text-white px-6 py-3 rounded-full font-medium 
+         hover:shadow-lg hover:shadow-primary/25 transition-all duration-300;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary/20;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/80 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gradient text animation */
+.animate-gradient {
+  background: linear-gradient(to right, #00B2FF, #0066FF, #00B2FF);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+  to {
+    background-position: 200% center;
+  }
+}

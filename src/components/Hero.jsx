@@ -68,7 +68,7 @@ export default function Hero() {
               </button>
             </Link>
             
-            <NavLink to="https://drive.google.com/file/d/176Ww16uuZxqAYv2mwoqY01C-SGlxy-WS/view" smooth={true} duration={500}>
+            <NavLink to="https://drive.google.com/file/d/1gpOTWYoKcbyu4SK9ZQpsmGWkFrzNoSbE/view" smooth={true} duration={500}>
               <button className="btn-primary group flex items-center font-bold">
                  Resume
                 <FaDownload className="ml-2" size={20} />  

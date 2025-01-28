@@ -10,21 +10,21 @@ export default function Portfolio() {
       category: 'Web Development',
       image: 'Screenshot 2025-01-26 174142.png',
       path: 'https://github.com/Ritesh-Thorve/To-Do',
-      path2: '/',
+      // path2: '/',
     },
     {
       title: 'LinkTree',
       category: 'Web Development: Next.js',
       image: 'Screenshot 2025-01-26 174721.png',
       path: 'https://github.com/Ritesh-Thorve/Link-Tree',
-      path2: '/',
+      // path2: '/',
     },
     {
       title: 'Portfolio Website',
       category: 'Web Development',
       image: 'portfolio.png',
       path: 'https://github.com/Ritesh-Thorve/My-Portfolio',
-      path2: '/',
+      // path2: '/',
     },
   ];
 
@@ -86,12 +86,13 @@ function PortfolioCard({ item, onNavigate }) {
            Source Code
         </button> 
 
-        <button
+        {/* <button
           className="mt-4 px-6 py-2 border-2 border-white rounded-full hover:bg-white hover:text-primary transition-colors"
           onClick={() => onNavigate(item.path2) }
         >
           View Project
-        </button>
+        </button> */}
+        
          </div>
       </div>
     </motion.div>

@@ -32,9 +32,9 @@ export default function Portfolio() {
      window.open(path, '_blank');
   };
 
-  const handleNavigate2 = (path2) => {
-    navigate(path2, '_blank');
-  };
+  // const handleNavigate2 = (path2) => {
+  //   navigate(path2, '_blank');
+  // };
 
   return (
     <section id="portfolio" className="py-20 px-4 bg-secondary/20">

@@ -1,12 +1,8 @@
-import { motion } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { motion } from 'framer-motion'; 
 import emailjs from '@emailjs/browser';
 import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 
 export default function Contact() {
-  const form = useRef();
-  const [status, setStatus] = useState({ type: '', message: '' });
-
  
   const contactInfo = [
     {

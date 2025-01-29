@@ -43,7 +43,7 @@ export default function Contact() {
     {
       icon: FaEnvelope,
       name: 'Email',
-      link: 'mailto:riteshthorve387@example.com',
+      link: 'mailto:riteshthorve387@gmail.com',
       color: 'hover:text-red-400'
     }
   ];

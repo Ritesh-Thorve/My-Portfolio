@@ -16,7 +16,7 @@ export default function Portfolio() {
       title: 'LinkTree',
       category: 'Web Development: Next.js',
       image: 'Screenshot 2025-01-26 174721.png',
-      path: 'https://github.com/Ritesh-Thorve/Link-Tree',
+      path: 'https://github.com/Ritesh-Thorve/LinkTree',
       // path2: '/',
     },
     {

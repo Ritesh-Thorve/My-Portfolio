@@ -15,7 +15,7 @@ This portfolio is built with the following technologies:
 
 🌐 Live Demo
 
-Check out the live portfolio: https://riteshthorve.vercel.app/
+Check out the live portfolio: https://riteshthorve.vercel.app
 
 ---
 🛠️ Future Enhancements :
@@ -34,4 +34,4 @@ Have questions or feedback? Reach out to me:
 
 💼 LinkedIn: https://www.linkedin.com/in/ritesh-thorve/
 
-🌐 Portfolio:  
+🌐 Portfolio:  portfolio: https://riteshthorve.vercel.app

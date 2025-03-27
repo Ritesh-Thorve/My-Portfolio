@@ -13,7 +13,7 @@ export default function Contact() {
     {
       icon: FaPhone,
       title: 'Phone',
-      content: '+91 9373564294',
+      content: '+91 7507232224',
     },
     {
       icon: FaEnvelope,

@@ -9,7 +9,7 @@ export default function Navbar() {
     { name: 'Resume', path: 'https://drive.google.com/file/d/1H3ZZWTn0GIUrABETg2NcPXYo8syJH45y/view' },
     { name: 'About', path: '/about' },
     { name: 'Service', path: '/services' },
-    { name: 'Project', path: '/portfolio' },
+    { name: 'Projects', path: '/portfolio' },
     { name: 'Contact', path: '/contact' }
   ];
 

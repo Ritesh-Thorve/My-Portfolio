@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 
 export default function Portfolio() {
   const navigate = useNavigate();
@@ -68,6 +68,8 @@ export default function Portfolio() {
 }
 
 function PortfolioCard({ item, onNavigate }) {
+  const isPath2Disabled = item.path2 === '#';
+
   return (
     <motion.div
       className="group relative overflow-hidden rounded-lg"
@@ -85,9 +87,9 @@ function PortfolioCard({ item, onNavigate }) {
       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-blue-400/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <h3 className="text-xl font-bold mb-2">{item.title}</h3>
         <p className="text-sm">{item.category}</p>
-         
-         <div className='flex gap-4 mt-4'>
-           <button
+
+        <div className="flex gap-4 mt-4">
+          <button
             className="px-6 py-2 border-2 border-white rounded-full hover:bg-white hover:text-primary transition-colors"
             onClick={() => onNavigate(item.path)}
           >
@@ -95,10 +97,15 @@ function PortfolioCard({ item, onNavigate }) {
           </button>
 
           <button
-            className="px-6 py-2 border-2 border-white rounded-full hover:bg-white hover:text-primary transition-colors"
-            onClick={() => onNavigate(item.path2)}
+            className={`px-6 py-2 border-2 rounded-full transition-colors ${
+              isPath2Disabled
+                ? 'border-gray-300 text-gray-300 cursor-not-allowed'
+                : 'border-white hover:bg-white hover:text-primary'
+            }`}
+            onClick={() => !isPath2Disabled && onNavigate(item.path2)}
+            disabled={isPath2Disabled}
           >
-            View Project
+            {isPath2Disabled ? 'Coming Soon' : 'View Project'}
           </button>
         </div>
       </div>

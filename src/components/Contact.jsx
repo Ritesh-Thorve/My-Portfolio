@@ -62,14 +62,14 @@ export default function Contact() {
         </motion.div>
 
         {/* Contact Info & Social Links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col md:flex-row gap-8">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-secondary/20 p-8 rounded-2xl space-y-6"
+            className="bg-secondary/20 p-8 rounded-2xl space-y-6 flex-1"
           >
             {contactInfo.map((info, index) => (
               <motion.a
@@ -84,7 +84,7 @@ export default function Contact() {
                 <div className="min-w-[60px] min-h-[60px] bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                   <info.icon className="text-2xl text-primary" />
                 </div>
-                
+
                 {/* Text section */}
                 <div className="flex flex-col justify-center">
                   <h3 className="text-lg font-semibold text-gray-200">{info.title}</h3>
@@ -100,10 +100,10 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-secondary/20 p-8 rounded-2xl flex flex-col justify-between"
+            className="bg-secondary/20 p-8 rounded-2xl flex flex-col items-center justify-center md:flex-row md:justify-start md:items-start md:space-x-8 flex-1"
           >
-            <h3 className="text-xl font-bold mb-6 text-center">Connect with Me</h3>
-            <div className="flex justify-center gap-6">
+            <h3 className="text-xl font-bold mb-6 text-center md:text-left">Connect with Me</h3>
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center md:justify-start">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}

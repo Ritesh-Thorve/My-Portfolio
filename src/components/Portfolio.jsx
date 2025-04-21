@@ -36,11 +36,12 @@ export default function Portfolio() {
   ];
 
   const handleNavigate = (path) => {
-     window.open(path, '_blank');
-  };
-
-  const handleNavigate2 = (path2) => {
-    navigate(path2, '_blank');
+    // For internal links, use navigate; for external links, use window.open
+    if (path.startsWith('http')) {
+      window.open(path, '_blank');
+    } else {
+      navigate(path);
+    }
   };
 
   return (
@@ -85,22 +86,21 @@ function PortfolioCard({ item, onNavigate }) {
         <h3 className="text-xl font-bold mb-2">{item.title}</h3>
         <p className="text-sm">{item.category}</p>
          
-         <div className='flex gap-2'>
-         <button
-          className="mt-4 px-6 py-2 border-2 border-white rounded-full hover:bg-white hover:text-primary transition-colors"
-          onClick={() => onNavigate(item.path)}
-        >
-           Source Code
-        </button> 
+         <div className='flex gap-4 mt-4'>
+           <button
+            className="px-6 py-2 border-2 border-white rounded-full hover:bg-white hover:text-primary transition-colors"
+            onClick={() => onNavigate(item.path)}
+          >
+            Source Code
+          </button>
 
-         <button
-          className="mt-4 px-6 py-2 border-2 border-white rounded-full hover:bg-white hover:text-primary transition-colors"
-          onClick={() => onNavigate(item.path2) }
-        >
-          View Project
-        </button>
-        
-         </div>
+          <button
+            className="px-6 py-2 border-2 border-white rounded-full hover:bg-white hover:text-primary transition-colors"
+            onClick={() => onNavigate(item.path2)}
+          >
+            View Project
+          </button>
+        </div>
       </div>
     </motion.div>
   );

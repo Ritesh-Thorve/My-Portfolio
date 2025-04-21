@@ -16,26 +16,28 @@ export default function Hero() {
   });
 
   return (
-    <section id="home" className="pt-32 pb-16 px-4 min-h-screen flex items-center">
-      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center">
+    <section id="home" className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+      <div className="container mx-auto max-w-7xl flex flex-col-reverse md:flex-row items-center">
         {/* Left Content */}
         <motion.div
-          className="md:w-1/2 text-center md:text-left pl-10"
+          className="md:w-1/2 text-center md:text-left md:pl-10 px-2"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <motion.p 
-            className="text-xl font-bold mb-4 ml-2"
+            className="text-lg sm:text-xl font-bold mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}>
-              Hi,{' '}<span className="bg-gradient-to-r from-primary to-blue-400 text-transparent bg-clip-text">
-              I am
-            </span>
+              Hi,{' '}
+              <span className="bg-gradient-to-r from-primary to-blue-400 text-transparent bg-clip-text">
+                I am
+              </span>
           </motion.p>
+
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-4"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -45,50 +47,58 @@ export default function Hero() {
               Thorve
             </span>
           </motion.h1>
+
           <motion.p
-            className="text-xl md:text-2xl min-h-[2rem] text-gray-400 mb-8"
+            className="text-lg sm:text-xl md:text-2xl min-h-[2rem] text-gray-400 mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
            {roles}
           </motion.p>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-             <div className="flex gap-5">
-             <Link to="contact" smooth={true} duration={500}>
-              <button className="btn-primary group font-bold">
-                Get Connected
-                <span className="inline-block ml-2 transform group-hover:translate-x-1 transition-transform font-bold">
-                  →
-                </span>
-              </button>
-            </Link>
-            
-            <NavLink to="https://drive.google.com/file/d/1H3ZZWTn0GIUrABETg2NcPXYo8syJH45y/view" smooth={true} duration={500}>
-              <button className="btn-primary group flex items-center font-bold">
-                 Resume
-                <FaDownload className="ml-2" size={20} />  
-              </button>
-            </NavLink>
-             </div>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center md:justify-start items-center">
+              <Link to="contact" smooth={true} duration={500}>
+                <button className="btn-primary group font-bold w-full sm:w-auto">
+                  Get Connected
+                  <span className="inline-block ml-2 transform group-hover:translate-x-1 transition-transform font-bold">
+                    →
+                  </span>
+                </button>
+              </Link>
+
+              <NavLink 
+                to="https://drive.google.com/file/d/1H3ZZWTn0GIUrABETg2NcPXYo8syJH45y/view" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <button className="btn-primary group flex items-center justify-center font-bold w-full sm:w-auto">
+                  Resume
+                  <FaDownload className="ml-2" size={20} />  
+                </button>
+              </NavLink>
+            </div>
           </motion.div>
 
-          <SocialIcons />
+          <div className="mt-8">
+            <SocialIcons />
+          </div>
         </motion.div>
 
         {/* Right Content - Profile Image */}
         <motion.div
-          className="md:w-1/2 mb-8 md:mb-0"
+          className="md:w-1/2 mb-12 md:mb-0"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="relative">
-            <div className="w-64 h-64 md:w-96 md:h-96 rounded-full bg-gradient-to-r from-primary to-blue-400 mx-auto overflow-hidden p-1">
+          <div className="relative flex justify-center">
+            <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-primary to-blue-400 overflow-hidden p-1">
               <img
                 src="ritesh2.jpg"
                 alt="Profile"
@@ -96,7 +106,7 @@ export default function Hero() {
               />
             </div>
             <motion.div
-              className="absolute -z-10 w-64 h-64 md:w-96 md:h-96 rounded-full bg-primary/30 mx-auto"
+              className="absolute -z-10 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-primary/30"
               style={{ filter: 'blur(40px)' }}
               animate={{
                 scale: [1, 1.1, 1],

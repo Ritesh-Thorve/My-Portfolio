@@ -20,39 +20,44 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto ">
-        <div className="flex  justify-between items-center font-bold">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center font-bold">
           <motion.div 
             className="text-3xl font-bold"
             whileHover={{ scale: 1.05 }}
           >
-             
-            <NavLink to="/">
-              <span className='ml-14 text-2xl'>Pleasure to</span> 
-              <span className="bg-gradient-to-r text-2xl from-primary to-blue-400 text-transparent bg-clip-text font-bold pl-2">connect! 
+            <NavLink to="/" className="flex items-center">
+              <span className='text-lg sm:text-xl md:text-2xl'>Pleasure to</span> 
+              <span className="bg-gradient-to-r text-lg sm:text-xl md:text-2xl from-primary to-blue-400 text-transparent bg-clip-text font-bold pl-2">
+                connect! 
               </span>     
             </NavLink> 
           </motion.div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 font-bold pr-36 ">
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-8 font-bold">
             {navItems.map((item) => (
               <NavLink
                 key={item.name}
                 to={item.path}
                 className={({ isActive }) => 
-                  `nav-link cursor-pointer relative group ${isActive ? 'text-primary' : ''}`
+                  `nav-link px-2 py-1 rounded-md transition-colors duration-200 cursor-pointer relative group text-sm lg:text-base ${
+                    isActive ? 'text-primary' : 'hover:text-primary/80'
+                  }`
                 }
+                target={item.path.startsWith('http') ? '_blank' : undefined}
               >
-                {item.name} 
+                {item.name}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </NavLink>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-primary"
+            className="md:hidden text-primary p-2 rounded-md hover:bg-primary/10 focus:outline-none focus:ring-2 focus:ring-primary/50"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
             <svg
               className="w-6 h-6"
@@ -74,20 +79,24 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <motion.div 
-          className="md:hidden bg-secondary/95 backdrop-blur-sm"
+          className="md:hidden bg-secondary/95 backdrop-blur-sm w-full fixed top-20 left-0 right-0 shadow-lg"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2 }}
+          exit={{ opacity: 0, y: -20 }}
         >
-          <div className="container mx-auto px-4 py-4">
+          <div className="container mx-auto px-4 py-2">
             {navItems.map((item) => (
               <NavLink
                 key={item.name}
                 to={item.path}
                 className={({ isActive }) => 
-                  `block py-2 nav-link hover:pl-4 transition-all ${isActive ? 'text-primary' : ''}`
+                  `block py-3 px-4 nav-link hover:bg-primary/10 rounded-md transition-all ${
+                    isActive ? 'text-primary font-semibold' : 'text-current'
+                  }`
                 }
                 onClick={() => setIsMenuOpen(false)}
+                target={item.path.startsWith('http') ? '_blank' : undefined}
               >
                 {item.name}
               </NavLink>

@@ -33,5 +33,3 @@ Have questions or feedback? Reach out to me:
 📩 Email: riteshthorve387@gmail.com
 
 💼 LinkedIn: https://www.linkedin.com/in/ritesh-thorve
-
-🌐 Portfolio:  portfolio: https://riteshthorve.vercel.app

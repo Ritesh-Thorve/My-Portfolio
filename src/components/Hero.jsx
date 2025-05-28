@@ -73,7 +73,7 @@ export default function Hero() {
               </Link>
 
               <NavLink 
-                to="https://drive.google.com/file/d/1sUOps-tTc_xvGN7HnZkfonOzMvuD9AqA/view?usp=drive_link" 
+                to="https://drive.google.com/file/d/1JZ8L1vADwRqZp3dA53bc2KE-Anr9mLR_/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >

@@ -6,6 +6,20 @@ export default function Projects() {
 
   const portfolioItems = [
     {
+      title: 'Campus Connect',
+      category: 'Software',
+      image: '/campus-Connect.png',
+      path: 'https://github.com/Ritesh-Thorve/CampusConnect',
+      path2: '#',
+    },
+    {
+      title: 'JMNP Water Portal',
+      category: 'Software',
+      image: '/jmnp.png',
+      path: 'https://github.com/Ritesh-Thorve/JMNP_water_portal',
+      path2: 'https://jmnp-water-portal.vercel.app/',
+    },
+    {
       title: 'Eventura',
       category: 'Web Development: MERN Stack',
       image: '/Eventura-img.png',

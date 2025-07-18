@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Resume', path: 'https://drive.google.com/file/d/1aMnMuQcQL-NkEBWUNAeWaGJ034hSkRES/view?usp=sharing' },
+    { name: 'Resume', path: 'https://drive.google.com/file/d/108kXE4Kx_NnhK3jGLpFYobX3toKAkpCk/view?usp=sharing' },
     { name: 'About', path: '/about' },
     { name: 'Service', path: '/services' },
     { name: 'Projects', path: '/portfolio' },
